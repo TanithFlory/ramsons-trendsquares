@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --primary-color: #211E1E;
+  --secondary-color: #ffb267;
+  --outline-color: #c47e40;
+  --text-color: #afafaf;
+  --heading-color: #324;
+  --stats-bg-color: rgba(40, 36, 36, 0.85);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--black-color);
+}
