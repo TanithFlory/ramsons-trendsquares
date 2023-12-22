@@ -8,7 +8,7 @@ interface IProps {
 
 export default function StatsCard({ Icon, title, children }: IProps) {
   return (
-    <div className="w-[250px] h-[125px] bg-statsBg p-4 rounded-xl border-[1px] border-outline hover:scale-105 group transition-all duration-500 ease-in-out cursor-pointer  hover:bg-black">
+    <div className="flex flex-col items-center justify-center w-[250px] h-[129px] bg-statsBg p-4 rounded-xl border-[1px] border-outline hover:scale-105 group transition-all duration-500 ease-in-out cursor-pointer  hover:bg-black">
       <div className="flex gap-4 items-center">
         <div>{Icon}</div>
         <div>
