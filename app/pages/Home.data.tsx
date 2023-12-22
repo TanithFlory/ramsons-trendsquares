@@ -90,7 +90,7 @@ export const cardData = [
     children: (
       <StatWrapper>
         <AiOutlineSafety className={`${dimensions} !fill-[#30f807]`} />
-        <span>All elveators working</span>
+        <span>All elevators working</span>
       </StatWrapper>
     ),
   },
