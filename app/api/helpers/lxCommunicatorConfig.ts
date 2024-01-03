@@ -28,23 +28,23 @@ export default function initializeCommunicatorConfig() {
   const delegateObj = {
     socketOnDataProgress: function socketOnDataProgress(socket, progress) {
       console.log("Socket on Data Progress:");
-      console.log(progress);
+      // console.log(progress);
     },
     socketOnTokenConfirmed: function socketOnTokenConfirmed(socket, response) {
       console.log("Socket on Token Confirmed:");
-      console.log(response);
+      // console.log(response);
     },
     socketOnTokenReceived: function socketOnTokenReceived(socket, result) {
       console.log("Socket on Token Received:");
-      console.log(result);
+      // console.log(result);
     },
     socketOnTokenRefresh: function socketOnTokenRefresh(socket, newTkObj) {
       console.log("Socket on Token Refresh");
-      console.log(newTkObj);
+      // console.log(newTkObj);
     },
     socketOnConnectionClosed: function socketOnConnectionClosed(socket, code) {
       console.log("Socket on Connection Closed:");
-      console.log(code);
+      // console.log(code);
     },
     socketOnEventReceived: function socketOnEventReceived(
       socket,
