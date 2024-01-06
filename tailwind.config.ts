@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      gridTemplateColumns: {
+        cards: "repeat(auto-fill, minmax(255px, 1fr))",
+      },
     },
     colors: {
       textColor: "var(--text-color)",
@@ -23,6 +26,7 @@ const config: Config = {
       primary: "var(--primary-color)",
       secondary: "var(--secondary-color)",
       outline: "var(--outline-color)",
+      cardColor: "var(--card-color)",
     },
   },
   plugins: [],

@@ -10,13 +10,7 @@ export async function POST(req: Request, res: Response) {
     const { ip_address, username, password, controlNode } = data;
 
     await socket.open("192.168.1.246", "admin", "Modo@2023");
-    // await socket.send("jdev/sps/enablebinstatusupdate");
-
-    const response = await socket.send("data/LoxAPP3.json");
-
-    const jsonData = await JSON.parse(response);
-
-    console.log(jsonData);
+    await socket.send("jdev/sps/enablebinstatusupdate");
 
     // const serverData = await socket.send("data/LoxAPP3.json");
     // const response2 = await socket.send(

@@ -25,44 +25,7 @@ export default function initializeCommunicatorConfig() {
 
   const socket = new LxCommunicator.WebSocket(config);
 
-  const delegateObj = {
-    socketOnDataProgress: function socketOnDataProgress(socket, progress) {
-      console.log("Socket on Data Progress:");
-      // console.log(progress);
-    },
-    socketOnTokenConfirmed: function socketOnTokenConfirmed(socket, response) {
-      console.log("Socket on Token Confirmed:");
-      // console.log(response);
-    },
-    socketOnTokenReceived: function socketOnTokenReceived(socket, result) {
-      console.log("Socket on Token Received:");
-      // console.log(result);
-    },
-    socketOnTokenRefresh: function socketOnTokenRefresh(socket, newTkObj) {
-      console.log("Socket on Token Refresh");
-      // console.log(newTkObj);
-    },
-    socketOnConnectionClosed: function socketOnConnectionClosed(socket, code) {
-      console.log("Socket on Connection Closed:");
-      // console.log(code);
-    },
-    socketOnEventReceived: function socketOnEventReceived(
-      socket,
-      events,
-      type
-    ) {
-      events.forEach((event) => {
-        if (event.uuid === "19657c36-0168-e0b8-ffffed57184a04d2") {
-          console.log("Central Light Controller");
-        }
-      });
-      // if (events?.entries) {
-      //   console.log(events);
-      // }
-    },
-  };
 
-  config.delegate = delegateObj;
 
   function getUUID() {
     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
@@ -75,5 +38,8 @@ export default function initializeCommunicatorConfig() {
     );
   }
 
-  return socket;
+  return {
+    socket,
+    delegateObj,
+  };
 }
