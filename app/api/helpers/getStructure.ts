@@ -1,8 +1,4 @@
-import { socket } from "../connect-miniserver/route";
-
-export async function GET(_req: Request, res: Response) {
-  await socket.open("192.168.1.246", "admin", "Modo@2023");
-
+export async function getStructure(socket: any) {
   try {
     const response = await socket.send("data/LoxAPP3.json");
 
